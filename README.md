@@ -4,7 +4,6 @@ Windows openssl installer in user mode
 
 ## MSYS2 compilation
 ```
-make build_sw
 /usr/bin/perl ./Configure --prefix=$PWD/dist no-idea no-mdc2 no-rc5 shared mingw64
 make build_sw
 make install_sw
