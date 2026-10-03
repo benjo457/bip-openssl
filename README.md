@@ -1,6 +1,6 @@
 # bip-openssl
 
-installs openssl for windows in non admin mode
+Windows openssl installer in user mode
 
 ## MSYS2 compilation
 ```
