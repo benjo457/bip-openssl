@@ -9,3 +9,6 @@ make install_ssldirs
 ```
 ## INNO Setup installer
 works in user mode for now
+## OpenSSL versions
+release LTS versions preferably
+![OpenSSL release life cycle](https://openssl-library.org/images/release_life_cycle.svg)
