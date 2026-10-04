@@ -9,7 +9,7 @@
 [Setup]
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-AppCopyright=Copyright (c) 2026 benjo457
+AppCopyright=Copyright (c) 2026 Laurent Magan
 LicenseFile=LICENSE
 WizardStyle=modern dynamic
 DefaultDirName={autopf}\{#MyAppName}
