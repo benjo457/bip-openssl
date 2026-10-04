@@ -1,5 +1,5 @@
 ; -- bip-openssl.iss --
-; OpenSSL Windows installer
+; Windows OpenSSL installer
 ;
 
 #define MyAppName "bip-openssl"
@@ -24,10 +24,10 @@ OutputBaseFilename={#MyAppName}-{#MyAppVersion}
 Source: "{#MyAppName}-{#MyAppVersion}-dist\*"; DestDir: "{app}"; Flags: recursesubdirs
 
 [Registry]
-Root: HKCU; Subkey: "Environment"; ValueType:string; ValueName: "OPENSSL_CONF"; ValueData: "{app}\ssl"; Flags: preservestringtype
-Root: HKCU; Subkey: "Environment"; ValueType:string; ValueName: "OPENSSL_CONF_INCLUDE"; ValueData: "{app}\include"; Flags: preservestringtype
-Root: HKCU; Subkey: "Environment"; ValueType:string; ValueName: "OPENSSL_MODULES"; ValueData: "{app}\lib64\ossl-modules"; Flags: preservestringtype
-Root: HKCU; Subkey: "Environment"; ValueType:string; ValueName: "OPENSSL"; ValueData: "{app}\bin\openssl.exe"; Flags: preservestringtype
+Root: HKCU; Subkey: "Environment"; ValueType:string; ValueName: "OPENSSL_CONF"; ValueData: "{app}\ssl"; Flags: preservestringtype uninsdeletevalue
+Root: HKCU; Subkey: "Environment"; ValueType:string; ValueName: "OPENSSL_CONF_INCLUDE"; ValueData: "{app}\include"; Flags: preservestringtype uninsdeletevalue
+Root: HKCU; Subkey: "Environment"; ValueType:string; ValueName: "OPENSSL_MODULES"; ValueData: "{app}\lib64\ossl-modules"; Flags: preservestringtype uninsdeletevalue
+Root: HKCU; Subkey: "Environment"; ValueType:string; ValueName: "OPENSSL"; ValueData: "{app}\bin\openssl.exe"; Flags: preservestringtype uninsdeletevalue
 Root: HKCU; Subkey: "Environment"; ValueType:expandsz; ValueName: "Path"; ValueData: "{olddata};{app}{\}bin"; Check: NeedsAddPathHKCU(ExpandConstant('{app}'))
 
 [Code]
@@ -44,3 +44,4 @@ begin
   // Pos() returns 0 if not found
   Result := Pos(';' + Param + '\bin;', ';' + OrigPath + ';') = 0;
 end;
+
