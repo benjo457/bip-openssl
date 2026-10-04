@@ -4,7 +4,7 @@
 
 #define MyAppName "bip-openssl"
 #define MyAppGroup "bip"
-#define MyAppVersion "4.0.3"
+#define MyAppVersion "3.5.9"
 
 [Setup]
 AppName={#MyAppName}
