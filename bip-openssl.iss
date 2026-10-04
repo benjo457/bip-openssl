@@ -1,14 +1,16 @@
 ; -- bip-openssl.iss --
-; Windows openssl installer in user mode
+; OpenSSL Windows installer
 ;
 
 #define MyAppName "bip-openssl"
 #define MyAppGroup "bip"
-#define MyAppVersion "4.0.3"
+#define MyAppVersion "3.5.9"
 
 [Setup]
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
+AppCopyright=Copyright (c) 2026 benjo457
+LicenseFile=LICENSE
 WizardStyle=modern dynamic
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppGroup}
