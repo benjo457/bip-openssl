@@ -11,4 +11,5 @@ make install_ssldirs
 works in user mode for now
 ## OpenSSL versions
 release LTS versions preferably
-![OpenSSL release life cycle](https://openssl-library.org/images/release_life_cycle.svg)
+[![OpenSSL release life cycle](https://openssl-library.org/images/release_life_cycle.svg)](https://openssl-library.org/roadmap/index.html)
+
